@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Swastik</h1>
+                    
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="mailto:onamverma8@gmail.com">Contact Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/swastik-verma-153b30253/" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p id="one">Full stack Developer</p>
+                <img src="swastik.jpg" alt="Joker" >
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Swastik</span> Verma </h1>
+               
+             
+              
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------about--------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="7040859.jpg"> 
+                </div>
+                <div class="about-colo-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="move">
+                        👋 Hi, <span>I'm Swastik Verma</span>, a detail-oriented Full-Stack Developer 
+                        passionate about crafting robust web applications. I specialize in creating responsive front-end 
+                        interfaces using HTML, CSS, and JavaScript, with mastery in React.js and Vue.js. On the back-end, 
+                        I architect scalable solutions using Node.js and Python, leveraging frameworks like Express and 
+                        Django. With expertise in DevOps and tools like Docker and Kubernetes, I ensure seamless application 
+                        deployment. I thrive on tackling challenges, stay abreast of industry trends, and am eager to transform 
+                        your ideas into reality. Let's collaborate! 💻🚀
+                    </p>
+                    <div class="about-move">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br> Designing web/app interfaces</li>
+                            <li><span>Web development</span><br> Web app development</li>
+                            <li><span>App development</span><br> Building android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024-Current</span><br> Front-end training at chitkara university</li>
+                            <li><span>Web development</span><br> Web app development</li>
+                            <li><span>App development</span><br> Building android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>UI?UX</span><br> Designing web/app interfaces</li>
+                            <li><span>Web development</span><br> Web app development</li>
+                            <li><span>App development</span><br> Building android/ios apps</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+ 
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+    }
+    event.currentTarget.classlist.add("active-link");
+    document.getElementById(tabname).class.list.add("active-tab");
+    
+
+</script>
+</body>
+</html>
